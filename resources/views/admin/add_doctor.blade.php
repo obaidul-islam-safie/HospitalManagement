@@ -51,12 +51,12 @@
                         <div style="padding: 15px">
 
                             <label for="">Doctor Speciality</label>
-                            <select name="speciality" id="" style="color: black; width: 200px;" required="">
-                                <option value="">--Select--</option>
-                                <option value="">Skin</option>
-                                <option value="">Heart</option>
-                                <option value="">Eye</option>
-                                <option value="">Nose</option>
+                            <select name="speciality" style="color: black; width: 200px;" required="">
+                                <option>--Select--</option>
+                                <option value="skin">Skin</option>
+                                <option value="heart">Heart</option>
+                                <option value="eye">Eye</option>
+                                <option value="nose">Nose</option>
 
                             </select>
                         </div>
