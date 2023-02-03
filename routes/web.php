@@ -56,3 +56,12 @@ Route::get('/show_appointment',[AdminController::class,'show_appointment']);
 Route::get('/approved/{id}',[AdminController::class,'approved']);
 
 Route::get('/canceled/{id}',[AdminController::class,'canceled']);
+
+
+Route::get('/show_doctor',[AdminController::class,'show_doctor']);
+
+
+
+
+Route::get('/delete_delete/{id}',[AdminController::class,'delete_delete']);
+Route::get('/update_doctor/{id}',[AdminController::class,'update_doctor']);
