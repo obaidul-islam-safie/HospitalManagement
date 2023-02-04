@@ -65,3 +65,6 @@ Route::get('/show_doctor',[AdminController::class,'show_doctor']);
 
 Route::get('/delete_delete/{id}',[AdminController::class,'delete_delete']);
 Route::get('/update_doctor/{id}',[AdminController::class,'update_doctor']);
+
+
+Route::post('/edit_doctor/{id}',[AdminController::class,'edit_doctor']);
