@@ -68,7 +68,8 @@
                             <th class="th_deg">Message</th> 
                             <th class="th_deg">Status</th>  
                             <th class="th_deg">Approved</th> 
-                            <th class="th_deg">Canceled</th>                
+                            <th class="th_deg">Canceled</th>    
+                            <th class="th_deg">Send Mail</th>            
                         </tr>
                 
                         
@@ -84,6 +85,7 @@
                             <td class="td">{{$appoint->status}}</td>
                             <td> <a class="btn btn-success" href="{{url('approved',$appoint->id)}}">Approved</a></td>
                             <td> <a class="btn btn-danger" href="{{url('canceled',$appoint->id)}}">Canceled</a></td>
+                            <td> <a class="btn btn-primary" href="{{url('send_mail',$appoint->id)}}">Send Mail</a></td>
                         </tr>
                         
                         @endforeach

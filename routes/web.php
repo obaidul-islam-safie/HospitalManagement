@@ -68,3 +68,14 @@ Route::get('/update_doctor/{id}',[AdminController::class,'update_doctor']);
 
 
 Route::post('/edit_doctor/{id}',[AdminController::class,'edit_doctor']);
+
+
+
+
+Route::get('/send_mail/{id}',[AdminController::class,'send_mail']);
+
+
+
+
+Route::post('/sendmail/{id}',[AdminController::class,'sendmail']);
+
