@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Doctor;
 use App\Models\Appointment;
+use Illuminate\Support\Facades\Auth;
 
 use Notification;
 use App\Notifications\SendEmailNotification;
@@ -12,7 +13,18 @@ use App\Notifications\SendEmailNotification;
 class AdminController extends Controller
 {
     public function addview(){
-        return view('admin.add_doctor');
+
+        if(Auth::id()){
+            if(Auth::user()->usertype==1){
+
+                return view('admin.add_doctor');
+            }else{
+                return redirect()->back();
+            }
+        }else{
+            return redirect('login');
+        }
+       
     }
 
     public function upload(Request $request){
@@ -36,9 +48,18 @@ class AdminController extends Controller
 
     public function show_appointment(){
 
-        $data=appointment::all();
+        if(Auth::id()){
+            if(Auth::user()->usertype==1){
 
-        return view('admin.show_appointment',compact('data'));
+                $data=appointment::all();
+
+                return view('admin.show_appointment',compact('data'));
+            }else{
+                return redirect()->back();
+            }
+        }else{
+            return redirect('login');
+        }
     }
 
 
